@@ -1,0 +1,24 @@
+{% extends 'todo/base.html' %}
+
+{% block body %}
+<div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                    <h3>{{todos.title}}</h3>
+                <hr>
+                 <div class="well well-lg">
+                     <div class="jumbotron jumbotron-sm">
+                            <p>{{todos.text}}</p>
+                     </div>
+                     <span class="nav navbar-nav navbar-right">Created on: {{todos.createdAt}} </span>
+                 </div>
+               <p class="nav navbar-nav navbar-right">
+                   <a href="{% url 'index' %}" class="btn btn-success">Go Back</a>
+               </p>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
+
+
+    

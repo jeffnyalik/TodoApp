@@ -1,0 +1,23 @@
+{% extends 'todo/base.html' %}
+
+{% block body %}
+    
+ {% if const %}
+ <div class="container">
+     <div class="row">
+         <div class="jumbotron">
+             <h2>Todo List </h2>
+             <hr>
+            {% for constant in const %}
+            <ul class="list-group">
+                <li class="list-group-item"><a href="{% url 'details' constant.id %}">{{constant.title}}</li>
+                    {%endfor%}
+            </ul>
+            {%endif%}
+            <p class="nav navbar-nav navbar-right">
+                <a href="{% url 'add' %}" class="btn btn-success" >Add List</a>
+            </p>
+         </div>
+     </div>
+ </div>
+ {% endblock body %}
